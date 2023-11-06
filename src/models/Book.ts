@@ -16,6 +16,6 @@ export interface IBook extends Document {
   createdAt: Date;
 }
 
-const BookModel = mongoose.model<IBook>("Book", bookSchema);
+const Book = mongoose.model<IBook>("Book", bookSchema);
 
-export default BookModel;
+export default Book;

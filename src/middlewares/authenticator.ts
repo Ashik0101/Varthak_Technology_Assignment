@@ -36,11 +36,8 @@ export const Authenticator = (
         return res.status(403).json({ message: "Forbidden: Invalid token" });
       }
 
-      // If verification is successful, add the payload to the request for further use
+      // If verification is successful, add the payload to the request body for further use
       req.body.user = payload;
-
-      console.log("payload is: ", payload);
-
       next();
     });
   } catch (error: any) {

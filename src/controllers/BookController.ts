@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import Joi from "joi";
-import BookModel, { IBook } from "../models/Book";
+import Book, { IBook } from "../models/Book";
 
 // Defining a Joi schema for validating req.body
 const createBookSchema = Joi.object({
@@ -20,7 +20,7 @@ export const createBook = async (req: Request, res: Response) => {
     }
 
     // Create a new book document
-    const newBook: IBook = new BookModel({
+    const newBook: IBook = new Book({
       title,
       price,
       user,
@@ -36,5 +36,31 @@ export const createBook = async (req: Request, res: Response) => {
     return res
       .status(500)
       .json({ message: "Internal server error", error: error.message });
+  }
+};
+
+//Controller to view the books of a particular user
+export const viewOwnBook = async (req: Request, res: Response) => {
+  try {
+    const books = await Book.find({ user: req.body.user }, { user: 0, __v: 0 });
+    res.status(200).json(books);
+  } catch (error: any) {
+    res.status(500).json({
+      message: "Internal server error",
+      error: error.message,
+    });
+  }
+};
+
+//Controller to see all the created books
+export const viewAllBooks = async (req: Request, res: Response) => {
+  try {
+    const books = await Book.find({});
+    res.status(200).json(books);
+  } catch (error: any) {
+    res.status(500).json({
+      message: "Internal server error",
+      error: error.message,
+    });
   }
 };
