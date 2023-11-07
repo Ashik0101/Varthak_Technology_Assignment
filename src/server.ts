@@ -3,11 +3,13 @@ import dotenv from "dotenv";
 import connection from "./config/db";
 import UserRouter from "./routes/UserRoutes";
 import BookRouter from "./routes/BookRoutes";
+import logger from "./middlewares/logger";
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
+app.use(logger);
 
 app.use("/auth", UserRouter);
 app.use("/", BookRouter);

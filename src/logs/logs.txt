@@ -1,0 +1,4 @@
+[11/7/2023, 11:03:07 AM] | Method: GET | URL: /books?new=1 | Time Taken: 22ms
+[11/7/2023, 11:03:08 AM] | Method: GET | URL: /books?new=1 | Time Taken: 1ms
+[11/7/2023, 11:03:41 AM] | Method: POST | URL: /login | Time Taken: 233ms
+[11/7/2023, 11:03:48 AM] | Method: POST | URL: /register | Time Taken: 114ms
