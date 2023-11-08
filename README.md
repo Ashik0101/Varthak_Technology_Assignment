@@ -53,7 +53,78 @@ Before you begin, ensure you have met the following requirements:
 
    ```shell
    npm start
+   or
+   npm run dev
    ```
+
+## DEPLOYED LINK
+
+```shell
+https://alive-bracelet-worm.cyclic.app/
+```
+
+**Registration**
+
+```shell
+Method : POST
+https://alive-bracelet-worm.cyclic.app/auth/register
+```
+
+**Login**
+
+```shell
+Method : POST
+https://alive-bracelet-worm.cyclic.app/auth/login
+```
+
+**Create Book**
+
+```shell
+Method : POST
+https://alive-bracelet-worm.cyclic.app/books
+```
+
+**Get All Books of a particular user**
+
+```shell
+Method : GET
+https://alive-bracelet-worm.cyclic.app/books
+```
+
+**Get All Books (Admin)**
+
+```shell
+Method : GET
+https://alive-bracelet-worm.cyclic.app/books/all
+```
+
+**Get all books created by a particular user more than 10 minutes ago**
+
+```shell
+Method : GET
+https://alive-bracelet-worm.cyclic.app/books?old=1
+```
+
+**Get all books created by a particular user in the last 10 minutes**
+
+```shell
+Method : GET
+https://alive-bracelet-worm.cyclic.app/books?new=1
+```
+
+**Get all books created more than 10 minutes ago**
+
+```shell
+Method : GET
+https://alive-bracelet-worm.cyclic.app/books/all?old=1
+```
+
+**Get all books created in the last 10 minutes**
+
+```shell
+Method : GET
+https://alive-bracelet-worm.cyclic.app/books/all?new=1
+```
 
 ## POSTMAN DOCUMENTATION
 
