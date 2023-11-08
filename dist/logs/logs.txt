@@ -1,0 +1,8 @@
+[11/8/2023, 11:41:06 AM] | Method: GET | URL: /books?old=1 | Time Taken: 20ms
+[11/8/2023, 11:42:12 AM] | Method: POST | URL: /books/ | Time Taken: 299ms
+[11/8/2023, 11:42:39 AM] | Method: GET | URL: /books?old=1 | Time Taken: 1ms
+[11/8/2023, 11:42:45 AM] | Method: GET | URL: /books?old=1 | Time Taken: 1ms
+[11/8/2023, 11:43:12 AM] | Method: POST | URL: /login | Time Taken: 334ms
+[11/8/2023, 11:43:39 AM] | Method: GET | URL: /books | Time Taken: 384ms
+[11/8/2023, 11:43:45 AM] | Method: GET | URL: /books?old=1 | Time Taken: 230ms
+[11/8/2023, 11:43:52 AM] | Method: GET | URL: /books?new=1 | Time Taken: 119ms

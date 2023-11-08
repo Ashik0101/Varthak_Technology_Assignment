@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const authenticator_1 = require("../middlewares/authenticator");
+const authorize_1 = require("../middlewares/authorize");
+const BookController_1 = require("../controllers/BookController");
+const BookRouter = (0, express_1.Router)();
+BookRouter.post("/books", authenticator_1.Authenticator, (0, authorize_1.checkRole)("CREATOR"), BookController_1.createBook);
+BookRouter.get("/books", authenticator_1.Authenticator, (0, authorize_1.checkRole)("VIEWER"), BookController_1.viewOwnBook);
+BookRouter.get("/books/all", authenticator_1.Authenticator, (0, authorize_1.checkRole)("VIEW_ALL"), BookController_1.viewAllBooks);
+exports.default = BookRouter;
